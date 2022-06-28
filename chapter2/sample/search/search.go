@@ -1,6 +1,7 @@
 package search
 
 import (
+	"fmt"
 	"log"
 	"sync"
 )
@@ -15,6 +16,8 @@ func Run(searchTerm string) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println("wsq")
+	fmt.Println(feeds)
 
 	// Create an unbuffered channel to receive match results to display.
 	results := make(chan *Result)
